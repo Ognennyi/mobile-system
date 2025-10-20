@@ -55,7 +55,7 @@ fun BirthdayCardPreview() {
     HappyBirthdayTheme {
         GreetingImage(
             from = "From !",
-            message = "Happy Birthday!")
+            message = "Happy Birthday Ildar!")
     }
 }
 
