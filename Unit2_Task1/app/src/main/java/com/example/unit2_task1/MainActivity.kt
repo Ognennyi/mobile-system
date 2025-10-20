@@ -100,7 +100,7 @@ class SmartHome(
     var deviceTurnOnCount = 0
         private set
 
-    // Утилиты для читаемости
+
     private fun isTvOn() = smartTvDevice.deviceStatus == "on"
     private fun isLightOn() = smartLightDevice.deviceStatus == "on"
 
@@ -207,7 +207,7 @@ class RangeRegulator(
         if (value in minValue..maxValue) {
             fieldData = value
         }
-        // если значение вне диапазона — просто игнорируем присвоение
+        // если значение вне диапазона то игнорируем присвоение
     }
 }
 
@@ -216,28 +216,5 @@ fun main() {
     val light = SmartLightDevice("Google Light", "Utility")
     val home = SmartHome(tv, light)
 
-    // Включаем устройства (deviceTurnOnCount должен увеличиваться корректно)
-    home.turnOnTv()
-    home.turnOnLight()
-    println("Devices ON: ${home.deviceTurnOnCount}")
 
-    // Печать инфо по устройствам
-    home.printSmartTvInfo()
-    home.printSmartLightInfo()
-
-    // Действия, разрешённые только при включённых устройствах
-    home.increaseTvVolume()
-    home.decreaseTvVolume()
-    home.changeTvChannelToNext()
-    home.changeTvChannelToPrevious()
-
-    home.increaseLightBrightness()
-    home.decreaseLightBrightness()
-
-    // Попробуем выполнить действия после выключения — должны заблокироваться
-    home.turnOffAllDevices()
-    println("Devices ON: ${home.deviceTurnOnCount}")
-
-    home.increaseTvVolume()           // должно сообщить, что TV выключен
-    home.decreaseLightBrightness()    // должно сообщить, что Light выключен
 }
