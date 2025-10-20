@@ -39,6 +39,9 @@ fun trickOrTreat(
     if (isTrick) {
         return trick
     } else {
+        if (extraTreat != null) {
+            println(extraTreat(5))
+        }
         return treat
     }
 }
