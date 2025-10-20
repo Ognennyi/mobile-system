@@ -73,7 +73,7 @@ fun GalImage(modifier: Modifier = Modifier){
 @Composable
 fun TaskText(){
         Text(
-            text = "All tasks completed",
+            text = "",
             fontWeight = FontWeight.Bold,
             modifier = Modifier.padding(bottom = 8.dp, top = 8.dp)
         )
