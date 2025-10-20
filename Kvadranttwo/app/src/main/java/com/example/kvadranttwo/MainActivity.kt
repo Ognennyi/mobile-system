@@ -60,7 +60,7 @@ fun MainScreen(){
             verticalAlignment = Alignment.CenterVertically
         ) {
             ThreeBlock(Modifier.weight(1f).background(Color(0xFFB69DF8)))
-            //FourBlock(Modifier.weight(1f).background(Color(0xFFF6EDFF)))
+            FourBlock(Modifier.weight(1f).background(Color(0xFFF6EDFF)))
         }
     }
 
@@ -138,24 +138,24 @@ fun ThreeBlock(modifier: Modifier = Modifier){
 }
 
 
-//@Composable
-//fun FourBlock(modifier: Modifier = Modifier){
-//    Column(
-//        modifier = modifier
-//            .padding(16.dp)
-//            .fillMaxSize(),
-//        verticalArrangement = Arrangement.Center,
-//        horizontalAlignment = Alignment.CenterHorizontally
-//    ) {
-//        Text(
-//            text = "Column composable",
-//            fontWeight = FontWeight.Bold,
-//            textAlign = TextAlign.Center,
-//            modifier = Modifier.padding(bottom = 16.dp)
-//        )
-//        Text(
-//            text = "A layout composable that places its children in a vertical sequence.",
-//            textAlign = TextAlign.Center
-//        )
-//    }
-//}
+@Composable
+fun FourBlock(modifier: Modifier = Modifier){
+    Column(
+        modifier = modifier
+            .padding(16.dp)
+            .fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(
+            text = "Column composable",
+            fontWeight = FontWeight.Bold,
+            textAlign = TextAlign.Center,
+            modifier = Modifier.padding(bottom = 16.dp)
+        )
+        Text(
+            text = "A layout composable that places its children in a vertical sequence.",
+            textAlign = TextAlign.Center
+        )
+    }
+}
