@@ -54,8 +54,8 @@ class MainActivity : ComponentActivity() {
 fun BirthdayCardPreview() {
     HappyBirthdayTheme {
         GreetingImage(
-            from = "From Karina",
-            message = "Happy Birthday Ildar!")
+            from = "From !",
+            message = "Happy Birthday!")
     }
 }
 
