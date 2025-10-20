@@ -216,5 +216,28 @@ fun main() {
     val light = SmartLightDevice("Google Light", "Utility")
     val home = SmartHome(tv, light)
 
+    // Включаем устройства (deviceTurnOnCount должен увеличиваться)
+    home.turnOnTv()
+    home.turnOnLight()
+    println("Devices ON: ${home.deviceTurnOnCount}")
 
+    // Печать инфо по устройствам
+    home.printSmartTvInfo()
+    home.printSmartLightInfo()
+
+    // Действия, разрешённые только при включённых устройствах
+    home.increaseTvVolume()
+    home.decreaseTvVolume()
+    home.changeTvChannelToNext()
+    home.changeTvChannelToPrevious()
+
+    home.increaseLightBrightness()
+    home.decreaseLightBrightness()
+
+    // должны заблокироваться
+    home.turnOffAllDevices()
+    println("Devices ON: ${home.deviceTurnOnCount}")
+
+    home.increaseTvVolume()           // должно сообщить, что TV выключен
+    home.decreaseLightBrightness()    // должно сообщить, что Light выключен
 }
