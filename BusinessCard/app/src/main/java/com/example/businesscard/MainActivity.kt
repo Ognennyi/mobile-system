@@ -58,7 +58,7 @@ fun MainScreen(){
     ) {
         Logo_Image()
         Logo_Name()
-        Info(Modifier.padding(top = 250.dp))
+        //Info(Modifier.padding(top = 250.dp))
 
 
     }
@@ -99,27 +99,3 @@ fun Logo_Name(modifier: Modifier = Modifier) {
     }
 }
 
-@Composable
-fun Info(modifier: Modifier = Modifier){
-    Column(
-        modifier = modifier
-    ) {
-        Text(
-            text = "Phone: 89377777777",
-            Modifier.padding(10.dp),
-            fontSize = 30.sp
-        )
-
-        Text(
-            text = "My telegram - @telega",
-            Modifier.padding(10.dp),
-            fontSize = 30.sp
-        )
-
-        Text(
-            text = "IsmailovIldar@kai.ru",
-            Modifier.padding(10.dp),
-            fontSize = 30.sp
-        )
-    }
-}
